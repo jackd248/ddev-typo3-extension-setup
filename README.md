@@ -5,6 +5,8 @@ This repository provides a boilerplate for TYPO3 extensions with DDEV integratio
 ## Features
 
 - Multi-TYPO3 version support (11.5, 12.4, 13.4)
+- Static code analysis within composer scripts for local development and CI
+- TER release github workflow
 
 ## Setup
 
@@ -19,9 +21,16 @@ This repository provides a boilerplate for TYPO3 extensions with DDEV integratio
 $ ddev start
 ```
 
+Install TYPO3 environments
+
+```
+$ ddev install all
+```
+
+
 ## Honoration
 
-This repository is partly inspired by https://github.com/a-r-m-i-n/ddev-for-typo3-extensions and adjusted to my own needs. 
+This repository is partly inspired by the following packages and adjusted to my own needs. 
 
 - https://github.com/a-r-m-i-n/ddev-for-typo3-extensions
 - https://github.com/sourcebroker/t3api
