@@ -1,10 +1,10 @@
 services:
     web:
         environment:
-            - EXTENSION_KEY=extension_key
-            - EXTENSION_NAME=extension-key
-            - PACKAGE_NAME=xima/extension-key
-            - TYPO3_VERSIONS=12 13
+            - EXTENSION_KEY=custom_extension_key
+            - EXTENSION_NAME=custom-extension-key
+            - PACKAGE_NAME=xima/custom-extension-key
+            - TYPO3_VERSIONS=11 12 13
 
             # TYPO3 v11 and v12 config
             - TYPO3_INSTALL_DB_DRIVER=mysqli
@@ -15,7 +15,7 @@ services:
             - TYPO3_INSTALL_DB_USE_EXISTING=0
             - TYPO3_INSTALL_ADMIN_USER=admin
             - TYPO3_INSTALL_ADMIN_PASSWORD=Password1!
-            - TYPO3_INSTALL_SITE_NAME=EXT:extension-key Dev Environment
+            - TYPO3_INSTALL_SITE_NAME=EXT:custom-extension-key Dev Environment
             - TYPO3_INSTALL_SITE_SETUP_TYPE=site
             - TYPO3_INSTALL_WEB_SERVER_CONFIG=apache
 
@@ -27,10 +27,5 @@ services:
             - TYPO3_SETUP_ADMIN_EMAIL=admin@example.com
             - TYPO3_SETUP_ADMIN_USERNAME=admin
             - TYPO3_SETUP_ADMIN_PASSWORD=Password1!
-            - TYPO3_PROJECT_NAME=EXT:extension-key Dev Environment
+            - TYPO3_PROJECT_NAME=EXT:custom-extension-key Dev Environment
             - TYPO3_SERVER_TYPE=apache
-        volumes:
-            - type: bind
-              source: ../
-              target: /var/www/html/extension_key
-              consistency: cached

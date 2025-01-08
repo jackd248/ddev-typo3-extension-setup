@@ -1,4 +1,4 @@
-name: extension-key
+name: custom-extension-key
 type: php
 docroot: .test
 php_version: "8.2"
@@ -7,21 +7,20 @@ router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames:
-  - 11.extension-key
-  - 12.extension-key
-  - 13.extension-key
+  - 11.custom-extension-key
+  - 12.custom-extension-key
+  - 13.custom-extension-key
 additional_fqdns: []
 database:
   type: mariadb
   version: "10.4"
 webimage_extra_packages: [libxml2-utils]
 use_dns_when_possible: true
-composer_version: "2"
-nodejs_version: "16"
 corepack_enable: false
 hooks:
   post-start:
-    - exec: cp /var/www/html/.ddev/templates/* /var/www/html/.test/
+    - exec: composer install --ignore-platform-reqs --no-scripts
+    - exec: mkdir -p /var/www/html/.test/ && cp /var/www/html/.ddev/templates/* /var/www/html/.test/
 
 # Key features of DDEV's config.yaml:
 
