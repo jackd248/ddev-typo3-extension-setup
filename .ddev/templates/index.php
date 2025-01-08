@@ -14,7 +14,6 @@ if (file_exists($composerJsonPath)) {
     $description = 'composer.json file not found. =(';
 }
 ?>
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
