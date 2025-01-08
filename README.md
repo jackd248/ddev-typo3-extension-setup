@@ -21,16 +21,36 @@ This repository provides a boilerplate for TYPO3 extensions with DDEV integratio
 $ ddev start
 ```
 
-Install TYPO3 environments
+Install TYPO3 environments:
 
 ```
 $ ddev install all
 ```
 
+Open the setup page:
+
+```
+$ ddev launch
+```
+
+## Static Code Analysis
+
+```
+$ ddev composer check
+$ ddev composer fix
+```
+
+## ToDo
+
+- [ ] Add files for static code analysis
 
 ## Credits
 
 This repository is partly inspired by the following packages and adjusted to my own needs. 
 
+Github Workflows:
+- https://github.com/maikschneider/reusable-workflows
+
+DDEV Setup:
 - https://github.com/sourcebroker/t3api
 - https://github.com/a-r-m-i-n/ddev-for-typo3-extensions
