@@ -30,7 +30,7 @@ $ ddev install all
 Open the setup page:
 
 ```
-$ ddev launch
+$ ddev open
 ```
 
 ## Static Code Analysis
@@ -43,6 +43,7 @@ $ ddev composer fix
 ## ToDo
 
 - [ ] Add files for static code analysis
+- [ ] More documentation
 
 ## Credits
 

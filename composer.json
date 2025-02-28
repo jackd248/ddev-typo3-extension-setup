@@ -1,7 +1,7 @@
 {
   "name": "vendor/custom-extension-key",
   "type": "typo3-cms-extension",
-  "description": "Description",
+  "description": "This repository provides a boilerplate for TYPO3 extensions with DDEV integration.",
   "keywords": [
     "TYPO3 CMS",
     "Extension"
@@ -40,6 +40,13 @@
   "extra": {
     "typo3/cms": {
       "custom-extension-key": "custom_extension_key"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true,
+      "ergebnis/composer-normalize": true
     }
   },
   "scripts": {
