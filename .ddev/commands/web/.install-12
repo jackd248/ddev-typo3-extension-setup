@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. .ddev/commands/web/.utils.sh
+. .ddev/.typo3-setup/scripts/.utils.sh
 
 # Pre-setup function for TYPO3 version 12.
 # This function is part of the installation script and is responsible for performing

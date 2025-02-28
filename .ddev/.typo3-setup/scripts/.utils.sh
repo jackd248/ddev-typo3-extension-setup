@@ -85,6 +85,7 @@ function check_typo3_version() {
 #   pre_setup <TYPO3_VERSION>
 function pre_setup() {
   export VERSION=$1
+  export BASE_PATH="/var/www/html/.test/$VERSION"
   intro_typo3
   message blue "Pre Setup for TYPO3 $VERSION"
   install_start
@@ -139,12 +140,10 @@ function install_start() {
 # creates necessary directories, sets permissions, and exports environment variables.
 # Additionally, it drops the existing database for the TYPO3 version.
 function setup_environment() {
-    BASE_PATH="/var/www/html/.test/$VERSION"
     rm -rf "$BASE_PATH"
     mkdir -p "$BASE_PATH/packages/$EXTENSION_KEY"
     chmod 775 -R $BASE_PATH
     export DATABASE="database_$VERSION"
-    export BASE_PATH
     if [ "$VERSION" == "11" ]; then
         export TYPO3_BIN="$BASE_PATH/vendor/bin/typo3cms"
     else
@@ -173,7 +172,7 @@ function create_symlinks_main_extension() {
 # It iterates over the directories in the specified path and creates symbolic links
 # for each directory in the base path.
 function create_symlinks_additional_extensions() {
-    for dir in .ddev/test/packages/*/; do
+    for dir in .ddev/.typo3-setup/typo3/packages/*/; do
         ln -sr "$dir" "$BASE_PATH/packages/$(basename "$dir")"
     done
 }
