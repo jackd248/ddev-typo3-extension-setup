@@ -10,7 +10,7 @@ command=$@
 version=11
 
 if [[ $command == typo3* ]]; then
-    command="/usr/bin/php vendor/bin/${command}"
+    command="/usr/bin/php vendor/bin/typo3cms${command:5}"
 fi
 
 TYPO3_PATH=".Build/${version}"
